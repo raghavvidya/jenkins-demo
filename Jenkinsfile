@@ -25,6 +25,7 @@ pipeline {
        # git tag -a some_tag -m 'Jenkins'
       #  git push ${GIT_URL} --tags
       cat dat.txt
+      echo test
         """
               
             }
