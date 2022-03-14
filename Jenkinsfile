@@ -13,10 +13,10 @@ pipeline {
         stage ('tag Stage') {
 
             steps {
-withCredentials() {
-    sh("git tag -a some_tag -m 'Jenkins'")
-    sh("git push ${GIT_URL} --tags")
-            }
+                  sh """
+        git tag -a some_tag -m 'Jenkins'
+        git push ${GIT_URL} --tags
+        """
               
             }
         }
