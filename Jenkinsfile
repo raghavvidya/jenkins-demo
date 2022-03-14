@@ -1,6 +1,10 @@
 pipeline {
 
     agent any 
+         triggers {
+        githubPush()
+      }
+
     stages {
         stage("Get Branches from Git"){
             steps{
