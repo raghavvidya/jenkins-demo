@@ -10,7 +10,8 @@ pipeline {
             steps{
                      sh """
                         git tag > ${WORKSPACE}/TagList.txt
-                        echo ${GITHUB_PR_TARGET_BRANCH}
+                        env
+                        
                      """  
                }
             }
