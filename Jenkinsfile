@@ -14,8 +14,9 @@ pipeline {
 
             steps {
                   sh """
-        git tag -a some_tag -m 'Jenkins'
-        git push ${GIT_URL} --tags
+       # git tag -a some_tag -m 'Jenkins'
+      #  git push ${GIT_URL} --tags
+      echo test
         """
               
             }
