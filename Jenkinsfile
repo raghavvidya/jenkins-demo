@@ -16,7 +16,7 @@ pipeline {
                   sh """
        # git tag -a some_tag -m 'Jenkins'
       #  git push ${GIT_URL} --tags
-      echo test
+      echo testew
         """
               
             }
