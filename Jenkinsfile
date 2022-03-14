@@ -15,7 +15,13 @@ pipeline {
             }
                 
         stage ('tag Stage') {
-
+            when { 
+              allOf { 
+                expression { env.GITHUB_PR_STATE == "CLOSE" }
+                expression { env.GITHUB_PR_TARGET_BRANCH == "master" }
+                expression { env.GITHUB_PR_SOURCE_BRANCH == "hotfix/foo" }
+              } 
+            }
             steps {
                   sh """
        # git tag -a some_tag -m 'Jenkins'
